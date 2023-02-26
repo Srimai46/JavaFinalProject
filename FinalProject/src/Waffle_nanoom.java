@@ -17,16 +17,8 @@ import java.awt.Toolkit;
 
 public class Waffle_nanoom extends JFrame {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private JPanel contentPane;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
+	public static void main (String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -39,15 +31,12 @@ public class Waffle_nanoom extends JFrame {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public Waffle_nanoom() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 700);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setForeground(new Color(0, 0, 0));
 		contentPane.setBackground(new Color(254, 251, 205));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -67,10 +56,15 @@ public class Waffle_nanoom extends JFrame {
 		btnNewButton.setFont(new Font("Yu Mincho", Font.BOLD, 20));
 		btnNewButton.setForeground(new Color(255, 132, 72));
 		btnNewButton.setBackground(new Color(255, 255, 255));
-		btnNewButton.addActionListener(new ActionListener() {
+		btnNewButton.addActionListener(new ActionListener() {	
 			public void actionPerformed(ActionEvent arg0) {
+				Waffle2 order = new Waffle2();
+				order.show();
+				
+				dispose();
 			}
 		});
+		
 		btnNewButton.setBounds(137, 531, 194, 52);
 		contentPane.add(btnNewButton);
 		

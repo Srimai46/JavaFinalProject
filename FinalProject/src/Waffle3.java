@@ -148,6 +148,13 @@ public class Waffle3 extends JFrame {
 		contentPane.add(lblPer);
 		
 		JButton small_Next = new JButton("Next");
+		small_Next.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Waffledis dis = new Waffledis();
+				dis.show();
+                dispose();
+			}
+		});
 		small_Next.setVerticalAlignment(SwingConstants.BOTTOM);
 		small_Next.setForeground(new Color(255, 132, 72));
 		small_Next.setFont(new Font("Yu Mincho", Font.BOLD, 28));
@@ -158,6 +165,9 @@ public class Waffle3 extends JFrame {
 		JButton small_Back = new JButton("Back");
 		small_Back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Waffle2 back = new Waffle2 ();
+				back.show();
+				dispose();
 			}
 		});
 		small_Back.setVerticalAlignment(SwingConstants.BOTTOM);

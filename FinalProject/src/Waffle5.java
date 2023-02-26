@@ -174,6 +174,13 @@ public class Waffle5 extends JFrame {
 		contentPane.add(lblPer);
 		
 		JButton large_Next = new JButton("Next");
+		large_Next.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Waffledis dis = new Waffledis();
+				dis.show();
+                dispose();
+			}
+		});
 		large_Next.setVerticalAlignment(SwingConstants.BOTTOM);
 		large_Next.setForeground(new Color(255, 132, 72));
 		large_Next.setFont(new Font("Yu Mincho", Font.BOLD, 28));
@@ -182,6 +189,13 @@ public class Waffle5 extends JFrame {
 		contentPane.add(large_Next);
 		
 		JButton large_Back = new JButton("Back");
+		large_Back.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Waffle2 back = new Waffle2 ();
+				back.show();
+				dispose();
+			}
+		});
 		large_Back.setVerticalAlignment(SwingConstants.BOTTOM);
 		large_Back.setForeground(new Color(255, 132, 72));
 		large_Back.setFont(new Font("Yu Mincho", Font.BOLD, 28));
@@ -189,4 +203,5 @@ public class Waffle5 extends JFrame {
 		large_Back.setBounds(648, 574, 194, 52);
 		contentPane.add(large_Back);
 	}
+	
 }

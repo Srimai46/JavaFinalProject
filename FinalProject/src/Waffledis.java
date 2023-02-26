@@ -94,27 +94,20 @@ public class Waffledis extends JFrame {
 		lblEnterPromotionCode.setBounds(204, 206, 530, 40);
 		contentPane.add(lblEnterPromotionCode);
 		
-		JButton btnCode_Back = new JButton("Back");
-		btnCode_Back.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		btnCode_Back.setForeground(new Color(255, 132, 72));
-		btnCode_Back.setFont(new Font("Yu Mincho", Font.BOLD, 28));
-		btnCode_Back.setBackground(Color.WHITE);
-		btnCode_Back.setBounds(648, 574, 194, 52);
-		contentPane.add(btnCode_Back);
-		
 		JButton btnCheckBill = new JButton("Check bill");
 		btnCheckBill.setFont(new Font("Yu Mincho", Font.BOLD, 28));
 		btnCheckBill.setForeground(new Color(255, 132, 72));
 		btnCheckBill.setBackground(new Color(255, 255, 255));
 		btnCheckBill.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Waffletotal total = new Waffletotal();
+				total.show();
+				
+				dispose();
 			}
 		});
 		
-		btnCheckBill.setBounds(418, 574, 194, 52);
+		btnCheckBill.setBounds(353, 574, 194, 52);
 		contentPane.add(btnCheckBill);
 		
 		textCode = new JTextField();
