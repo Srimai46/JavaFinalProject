@@ -115,4 +115,5 @@ public class Waffledis extends JFrame {
 		contentPane.add(textCode);
 		textCode.setColumns(10);
 	}
+	
 }

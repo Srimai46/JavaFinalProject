@@ -13,6 +13,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
@@ -90,6 +91,12 @@ public class Waffle4 extends JFrame {
 		medium_Green.setBounds(551, 133, 202, 57);
 		contentPane.add(medium_Green);
 		
+		ButtonGroup group = new ButtonGroup();
+		group.add(medium_Origin);
+		group.add(medium_Choc);
+		group.add(medium_Strawberry);
+		group.add(medium_Green);
+		
 		JLabel lblFlour = new JLabel("Flour :");
 		lblFlour.setForeground(new Color(255, 132, 72));
 		lblFlour.setFont(new Font("Yu Mincho", Font.BOLD, 32));
@@ -104,9 +111,23 @@ public class Waffle4 extends JFrame {
 		lblTopping.setBounds(91, 297, 163, 54);
 		contentPane.add(lblTopping);
 		
-		JComboBox medium_Topping1 = new JComboBox();
+		JComboBox<String> medium_Topping1 = new JComboBox<String>();
 		medium_Topping1.setFont(new Font("Yu Mincho", Font.BOLD, 26));
-		medium_Topping1.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
+		medium_Topping1.addItem("-");
+		medium_Topping1.addItem("Corn");
+		medium_Topping1.addItem("Crab strick");
+		medium_Topping1.addItem("Currant");
+		medium_Topping1.addItem("Foytong");
+		medium_Topping1.addItem("Pumpkin");
+		medium_Topping1.addItem("Coconut");
+		medium_Topping1.addItem("Taro");
+		medium_Topping1.addItem("Purple Sweet Potato");
+		medium_Topping1.addItem("Banana");
+		medium_Topping1.addItem("Chocolate chip");
+		medium_Topping1.addItem("Ham");
+		medium_Topping1.addItem("Cheddar Cheese");
+		medium_Topping1.addItem("Strawberryy Yam");
+		//medium_Topping1.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping1.setToolTipText("");
 		medium_Topping1.setBounds(264, 310, 330, 30);
 		contentPane.add(medium_Topping1);
@@ -118,8 +139,22 @@ public class Waffle4 extends JFrame {
 		lblTopping_2.setBounds(91, 351, 163, 54);
 		contentPane.add(lblTopping_2);
 		
-		JComboBox medium_Topping2 = new JComboBox();
-		medium_Topping2.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
+		JComboBox<String> medium_Topping2 = new JComboBox<String>();
+		medium_Topping2.addItem("-");
+		medium_Topping2.addItem("Corn");
+		medium_Topping2.addItem("Crab strick");
+		medium_Topping2.addItem("Currant");
+		medium_Topping2.addItem("Foytong");
+		medium_Topping2.addItem("Pumpkin");
+		medium_Topping2.addItem("Coconut");
+		medium_Topping2.addItem("Taro");
+		medium_Topping2.addItem("Purple Sweet Potato");
+		medium_Topping2.addItem("Banana");
+		medium_Topping2.addItem("Chocolate chip");
+		medium_Topping2.addItem("Ham");
+		medium_Topping2.addItem("Cheddar Cheese");
+		medium_Topping2.addItem("Strawberryy Yam");
+		//medium_Topping2.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping2.setToolTipText("");
 		medium_Topping2.setFont(new Font("Yu Mincho", Font.BOLD, 26));
 		medium_Topping2.setBounds(264, 364, 330, 30);
@@ -144,12 +179,28 @@ public class Waffle4 extends JFrame {
 		lblTopping_1.setBounds(91, 415, 163, 54);
 		contentPane.add(lblTopping_1);
 		
-		JComboBox medium_Topping3 = new JComboBox();
-		medium_Topping3.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
+		JComboBox<String> medium_Topping3 = new JComboBox<String>();
+		medium_Topping3.addItem("-");
+		medium_Topping3.addItem("Corn");
+		medium_Topping3.addItem("Crab strick");
+		medium_Topping3.addItem("Currant");
+		medium_Topping3.addItem("Foytong");
+		medium_Topping3.addItem("Pumpkin");
+		medium_Topping3.addItem("Coconut");
+		medium_Topping3.addItem("Taro");
+		medium_Topping3.addItem("Purple Sweet Potato");
+		medium_Topping3.addItem("Banana");
+		medium_Topping3.addItem("Chocolate chip");
+		medium_Topping3.addItem("Ham");
+		medium_Topping3.addItem("Cheddar Cheese");
+		medium_Topping3.addItem("Strawberryy Yam");
+		//medium_Topping3.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping3.setToolTipText("");
 		medium_Topping3.setFont(new Font("Yu Mincho", Font.BOLD, 26));
 		medium_Topping3.setBounds(264, 428, 330, 30);
 		contentPane.add(medium_Topping3);
+		
+		new Waffletotal(medium_Topping1,medium_Topping2,medium_Topping3);
 		
 		JLabel lblPer = new JLabel("10 ฿ per topping");
 		lblPer.setHorizontalAlignment(SwingConstants.CENTER);
@@ -161,6 +212,7 @@ public class Waffle4 extends JFrame {
 		
 		JButton medium_Next = new JButton("Next");
 		medium_Next.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				Waffledis dis = new Waffledis();
 				dis.show();
@@ -176,6 +228,7 @@ public class Waffle4 extends JFrame {
 		
 		JButton medium_Back = new JButton("Back");
 		medium_Back.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
 				Waffle2 back = new Waffle2 ();
 				back.show();
@@ -188,5 +241,21 @@ public class Waffle4 extends JFrame {
 		medium_Back.setBackground(Color.WHITE);
 		medium_Back.setBounds(648, 574, 194, 52);
 		contentPane.add(medium_Back);
+		
+		JButton Code = new JButton("Code");
+		Code.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent e) {
+				Waffledis dis = new Waffledis();
+				dis.show();
+                dispose();
+			}
+		});
+		Code.setVerticalAlignment(SwingConstants.BOTTOM);
+		Code.setForeground(new Color(255, 132, 72));
+		Code.setFont(new Font("Yu Mincho", Font.BOLD, 28));
+		Code.setBackground(Color.WHITE);
+		Code.setBounds(648, 489, 194, 52);
+		contentPane.add(Code);
 	}
 }

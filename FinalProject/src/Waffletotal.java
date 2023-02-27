@@ -8,15 +8,25 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 
 public class Waffletotal extends JFrame {
-
+	private JComboBox<String> menu1 = null;
+	private JComboBox<String> menu2 = null;
+	private JComboBox<String> menu3= null;
+	private String menu4 = null;
 	private JPanel contentPane;
-
+	private String topping1 = "";
+	private String topping2 = "";
+	private String topping3 = "";	
+	private String topping4 = "";
+	
+	private String[] menu = {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"};
 	/**
 	 * Launch the application.
 	 */
@@ -36,7 +46,26 @@ public class Waffletotal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	public Waffletotal(JComboBox<String> large_Topping1,JComboBox<String> large_Topping2,JComboBox<String> large_Topping3,JComboBox<String> large_Topping4) {
+		this.menu1=large_Topping1;
+		this.menu2=large_Topping2;
+		this.menu3=large_Topping3;
+		this.menu3=large_Topping4;
+	}
+	public Waffletotal(JComboBox<String> medium_Topping1,JComboBox<String> medium_Topping2,JComboBox<String> medium_Topping3) {
+		this.menu1=medium_Topping1;
+		this.menu2=medium_Topping2;
+		this.menu3=medium_Topping3;
+	}
+	public Waffletotal(JComboBox<String> small_Topping1,JComboBox<String> small_Topping2) {
+		this.menu1=small_Topping1;
+		this.menu2=small_Topping2;
+		
+		
+		
+	}
 	public Waffletotal() {
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,15 +95,32 @@ public class Waffletotal extends JFrame {
 		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\D4bby\\OneDrive\\เดสก์ท็อป\\photo gui\\0d1e70fd160476a3f78496be79e0813e-65x75.png"));
 		lblNewLabel_1.setBounds(10, 551, 65, 75);
 		contentPane.add(lblNewLabel_1);
-
-		JLabel lblOrder = new JLabel("Bill");
+		
+		for (int i = 0;i<menu.length;i++) {
+			if(menu[i].equals(menu1)) {
+				topping1 = menu[i];
+			}
+			if(menu[i].equals(menu2)) {
+				topping2 = menu[i];
+			}
+			if(menu[i].equals(menu3)) {
+				topping3 = menu[i];
+			}
+			if(menu[i].equals(menu4)) {
+				topping4 = menu[i];
+			}
+			
+		}
+		
+		JLabel lblOrder = new JLabel(topping1);
 		lblOrder.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblOrder.setForeground(new Color(255, 132, 72));
 		lblOrder.setFont(new Font("Yu Mincho", Font.BOLD, 60));
 		lblOrder.setBounds(373, 31, 194, 137);
 		contentPane.add(lblOrder);
-
-		JLabel lblSize = new JLabel("1. {size}\r\n--------------------------------------------Price.");
+		
+		JLabel lblSize = new JLabel(topping1+" "+topping2);
+		//JLabel lblSize = new JLabel("1. {size}\r\n--------------------------------------------Price.");
 		lblSize.setFont(new Font("Yu Mincho", Font.PLAIN, 22));
 		lblSize.setBounds(73, 151, 620, 102);
 		contentPane.add(lblSize);
@@ -121,5 +167,6 @@ public class Waffletotal extends JFrame {
 		contentPane.add(btnbill_Close);
 
 	}
+	
 	
 }
