@@ -16,15 +16,9 @@ import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 
 public class Waffletotal extends JFrame {
-	private JComboBox<String> menu1 = null;
-	private JComboBox<String> menu2 = null;
-	private JComboBox<String> menu3= null;
-	private String menu4 = null;
+	
 	private JPanel contentPane;
-	private String topping1 = "";
-	private String topping2 = "";
-	private String topping3 = "";	
-	private String topping4 = "";
+	
 	
 	private String[] menu = {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"};
 	/**
@@ -46,24 +40,7 @@ public class Waffletotal extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Waffletotal(JComboBox<String> large_Topping1,JComboBox<String> large_Topping2,JComboBox<String> large_Topping3,JComboBox<String> large_Topping4) {
-		this.menu1=large_Topping1;
-		this.menu2=large_Topping2;
-		this.menu3=large_Topping3;
-		this.menu3=large_Topping4;
-	}
-	public Waffletotal(JComboBox<String> medium_Topping1,JComboBox<String> medium_Topping2,JComboBox<String> medium_Topping3) {
-		this.menu1=medium_Topping1;
-		this.menu2=medium_Topping2;
-		this.menu3=medium_Topping3;
-	}
-	public Waffletotal(JComboBox<String> small_Topping1,JComboBox<String> small_Topping2) {
-		this.menu1=small_Topping1;
-		this.menu2=small_Topping2;
-		
-		
-		
-	}
+	
 	public Waffletotal() {
 		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
@@ -96,23 +73,8 @@ public class Waffletotal extends JFrame {
 		lblNewLabel_1.setBounds(10, 551, 65, 75);
 		contentPane.add(lblNewLabel_1);
 		
-		for (int i = 0;i<menu.length;i++) {
-			if(menu[i].equals(menu1)) {
-				topping1 = menu[i];
-			}
-			if(menu[i].equals(menu2)) {
-				topping2 = menu[i];
-			}
-			if(menu[i].equals(menu3)) {
-				topping3 = menu[i];
-			}
-			if(menu[i].equals(menu4)) {
-				topping4 = menu[i];
-			}
-			
-		}
-		
-		JLabel lblOrder = new JLabel(topping1);
+				
+		JLabel lblOrder = new JLabel("size---------------------------------------------------------price.");
 		lblOrder.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblOrder.setForeground(new Color(255, 132, 72));
 		lblOrder.setFont(new Font("Yu Mincho", Font.BOLD, 60));

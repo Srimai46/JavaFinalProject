@@ -200,7 +200,6 @@ public class Waffle4 extends JFrame {
 		medium_Topping3.setBounds(264, 428, 330, 30);
 		contentPane.add(medium_Topping3);
 		
-		new Waffletotal(medium_Topping1,medium_Topping2,medium_Topping3);
 		
 		JLabel lblPer = new JLabel("10 ฿ per topping");
 		lblPer.setHorizontalAlignment(SwingConstants.CENTER);
