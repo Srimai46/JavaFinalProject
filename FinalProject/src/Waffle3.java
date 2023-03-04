@@ -4,6 +4,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -18,11 +19,14 @@ import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JTextField;
 
 public class Waffle3 extends JFrame {
 	
-	private String menuS = "";
+	
 	private JPanel contentPane;
+	private JTextField textDiscount;
+	private int price = 40;
 
 	/**
 	 * Launch the application.
@@ -187,12 +191,25 @@ public class Waffle3 extends JFrame {
 		lblPer.setBounds(301, 396, 257, 54);
 		contentPane.add(lblPer);
 		
-		JButton small_Next = new JButton("Bill");
+		textDiscount = new JTextField();
+		textDiscount.setText("Enter you Code");
+		textDiscount.setBounds(267, 508, 371, 35);
+		contentPane.add(textDiscount);
+		textDiscount.setColumns(10);
+		
+		Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
+		
+		JButton small_Next = new JButton("Confirm");
 		small_Next.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
-			int price = 40;
+			
 			String top1,top2,top3,flour;
 			public void actionPerformed(ActionEvent e) {
+				
+				if(textDiscount.getText().equals("11111")){
+					price = price - 10;
+				}
+				
 				if(small_Green.isSelected()) {
 					flour = "Green Tea"; 
 				}else if(small_Strawberry.isSelected()){
@@ -209,8 +226,7 @@ public class Waffle3 extends JFrame {
 				if(top1.equals("-")) price = price-10;
 				if(top2.equals("-")) price = price-10;
 				
-				Save save = new Save();
-				save.set3(top1, top2, top3);
+				
 				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
 				top1+"\nTopping : "+top2+"\nPrice : "+price);	
 				System.exit(0);
@@ -242,24 +258,11 @@ public class Waffle3 extends JFrame {
 		small_Back.setBounds(648, 574, 194, 52);
 		contentPane.add(small_Back);
 		
-		JButton Code = new JButton("Code");
-		Code.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
-			public void actionPerformed(ActionEvent e) {
-				Waffledis dis = new Waffledis();
-				dis.show();
-                dispose();
-			}
-		});
-		Code.setVerticalAlignment(SwingConstants.BOTTOM);
-		Code.setForeground(new Color(255, 132, 72));
-		Code.setFont(new Font("Yu Mincho", Font.BOLD, 28));
-		Code.setBackground(Color.WHITE);
-		Code.setBounds(648, 499, 194, 52);
-		contentPane.add(Code);
+		
+		
+		
+		
 		
 		
 	}
-	
-	
 }

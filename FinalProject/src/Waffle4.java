@@ -15,6 +15,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -213,13 +214,22 @@ public class Waffle4 extends JFrame {
 		lblPer.setBounds(315, 468, 257, 54);
 		contentPane.add(lblPer);
 				
-		
+		JTextField textDiscount = new JTextField();
+		textDiscount.setText("Enter you Code");
+		textDiscount.setBounds(267, 508, 371, 35);
+		contentPane.add(textDiscount);
+		textDiscount.setColumns(10);
 		
 		JButton medium_Next = new JButton("Confirm");
 		medium_Next.addActionListener(new ActionListener() {
+					
 			int price = 60;
 			String top1,top2,top3,flour;
-			public void actionPerformed(ActionEvent arg0) {								
+			public void actionPerformed(ActionEvent arg0) {	
+				if(textDiscount.getText().equals("11111")){
+					price = price - 10;
+				}
+				
 				if(medium_Green.isSelected()) {
 					flour = "Green Tea"; 
 				}else if(medium_Strawberry.isSelected()){
@@ -237,8 +247,7 @@ public class Waffle4 extends JFrame {
 				if(top1.equals("-")) price = price-10;
 				if(top2.equals("-")) price = price-10;
 				if(top3.equals("-")) price = price-10;
-				Save save = new Save();
-				save.set3(top1, top2, top3);
+				
 				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
 				top1+"\nTopping : "+top2+"\nTopping : "+top3+"\nPrice : "+price);	
 				System.exit(0);
@@ -266,22 +275,6 @@ public class Waffle4 extends JFrame {
 		medium_Back.setBackground(Color.WHITE);
 		medium_Back.setBounds(648, 574, 194, 52);
 		contentPane.add(medium_Back);
-		
-		JButton Code = new JButton("Code");
-		Code.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
-			public void actionPerformed(ActionEvent e) {
-				Waffledis dis = new Waffledis();
-				dis.show();
-                dispose();
-			}
-		});
-		Code.setVerticalAlignment(SwingConstants.BOTTOM);
-		Code.setForeground(new Color(255, 132, 72));
-		Code.setFont(new Font("Yu Mincho", Font.BOLD, 28));
-		Code.setBackground(Color.WHITE);
-		Code.setBounds(648, 489, 194, 52);
-		contentPane.add(Code);
 		
 		
 		

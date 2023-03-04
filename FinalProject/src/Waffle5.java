@@ -15,6 +15,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
@@ -239,12 +240,22 @@ public class Waffle5 extends JFrame {
 		lblPer.setBounds(301, 519, 257, 54);
 		contentPane.add(lblPer);
 		
-		JButton large_Next = new JButton("Next");
+		JTextField textDiscount = new JTextField();
+		textDiscount.setText("Enter you Code");
+		textDiscount.setBounds(267, 508, 371, 35);
+		contentPane.add(textDiscount);
+		textDiscount.setColumns(10);
+		
+		JButton large_Next = new JButton("Confirm");
 		large_Next.addActionListener(new ActionListener() {
 			int price = 80;
 			String top1,top2,top3,top4,flour;
-			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
+				
+				if(textDiscount.getText().equals("11111")){
+					price = price - 10;
+				}
+				
 				if(large_Green.isSelected()) {
 					flour = "Green Tea"; 
 				}else if(large_Strawberry.isSelected()){
@@ -264,8 +275,8 @@ public class Waffle5 extends JFrame {
 				if(top2.equals("-")) price = price-10;
 				if(top3.equals("-")) price = price-10;
 				if(top4.equals("-")) price = price-10;
-				Save save = new Save();
-				save.set3(top1, top2, top3);
+				
+				
 				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
 				top1+"\nTopping : "+top2+"\nTopping : "+top3+"\nTopping : "+top4+"\nPrice : "+price);	
 				System.exit(0);
@@ -293,22 +304,6 @@ public class Waffle5 extends JFrame {
 		large_Back.setBackground(Color.WHITE);
 		large_Back.setBounds(648, 574, 194, 52);
 		contentPane.add(large_Back);
-		
-		JButton Code = new JButton("Code");
-		Code.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
-			public void actionPerformed(ActionEvent e) {
-				Waffledis dis = new Waffledis();
-				dis.show();
-                dispose();
-			}
-		});
-		Code.setVerticalAlignment(SwingConstants.BOTTOM);
-		Code.setForeground(new Color(255, 132, 72));
-		Code.setFont(new Font("Yu Mincho", Font.BOLD, 28));
-		Code.setBackground(Color.WHITE);
-		Code.setBounds(648, 493, 194, 52);
-		contentPane.add(Code);
 	}
 	
 }
