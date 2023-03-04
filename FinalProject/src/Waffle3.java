@@ -6,6 +6,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -18,7 +20,8 @@ import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 
 public class Waffle3 extends JFrame {
-
+	
+	private String menuS = "";
 	private JPanel contentPane;
 
 	/**
@@ -187,10 +190,30 @@ public class Waffle3 extends JFrame {
 		JButton small_Next = new JButton("Bill");
 		small_Next.addActionListener(new ActionListener() {
 			@SuppressWarnings("deprecation")
+			int price = 40;
+			String top1,top2,top3,flour;
 			public void actionPerformed(ActionEvent e) {
-				Waffletotal total = new Waffletotal();				
-				total.show();
-                dispose();
+				if(small_Green.isSelected()) {
+					flour = "Green Tea"; 
+				}else if(small_Strawberry.isSelected()){
+					flour = "Strawberry"; 
+				}else if(small_Choc.isSelected()) {
+					flour = "Chocolate"; 
+				}else {
+					flour = "Original"; 
+				}
+				
+				top1 = (String)small_Topping1.getSelectedItem();
+				top2 = (String)small_Topping2.getSelectedItem();
+								
+				if(top1.equals("-")) price = price-10;
+				if(top2.equals("-")) price = price-10;
+				
+				Save save = new Save();
+				save.set3(top1, top2, top3);
+				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
+				top1+"\nTopping : "+top2+"\nPrice : "+price);	
+				System.exit(0);
 			}
 		});
 		
@@ -232,9 +255,11 @@ public class Waffle3 extends JFrame {
 		Code.setForeground(new Color(255, 132, 72));
 		Code.setFont(new Font("Yu Mincho", Font.BOLD, 28));
 		Code.setBackground(Color.WHITE);
-		Code.setBounds(338, 461, 194, 52);
+		Code.setBounds(648, 499, 194, 52);
 		contentPane.add(Code);
 		
 		
 	}
+	
+	
 }

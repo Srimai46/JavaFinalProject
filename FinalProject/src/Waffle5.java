@@ -6,6 +6,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -239,11 +241,34 @@ public class Waffle5 extends JFrame {
 		
 		JButton large_Next = new JButton("Next");
 		large_Next.addActionListener(new ActionListener() {
+			int price = 80;
+			String top1,top2,top3,top4,flour;
 			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent e) {
-				Waffledis dis = new Waffledis();
-				dis.show();
-                dispose();
+				if(large_Green.isSelected()) {
+					flour = "Green Tea"; 
+				}else if(large_Strawberry.isSelected()){
+					flour = "Strawberry"; 
+				}else if(large_Choco.isSelected()) {
+					flour = "Chocolate"; 
+				}else {
+					flour = "Original"; 
+				}
+				
+				top1 = (String)large_Topping1.getSelectedItem();
+				top2 = (String)large_Topping2.getSelectedItem();
+				top3 = (String)large_Topping3.getSelectedItem();
+				top4 = (String)large_Topping4.getSelectedItem();
+				
+				if(top1.equals("-")) price = price-10;
+				if(top2.equals("-")) price = price-10;
+				if(top3.equals("-")) price = price-10;
+				if(top4.equals("-")) price = price-10;
+				Save save = new Save();
+				save.set3(top1, top2, top3);
+				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
+				top1+"\nTopping : "+top2+"\nTopping : "+top3+"\nTopping : "+top4+"\nPrice : "+price);	
+				System.exit(0);
 			}
 		});
 		large_Next.setVerticalAlignment(SwingConstants.BOTTOM);

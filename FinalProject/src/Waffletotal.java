@@ -17,14 +17,12 @@ import java.awt.Toolkit;
 
 public class Waffletotal extends JFrame {
 	
+	
 	private JPanel contentPane;
-	
-	
-	private String[] menu = {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"};
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -41,8 +39,7 @@ public class Waffletotal extends JFrame {
 	 * Create the frame.
 	 */
 	
-	public Waffletotal() {
-		
+	public Waffletotal() {	
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,6 +70,7 @@ public class Waffletotal extends JFrame {
 		lblNewLabel_1.setBounds(10, 551, 65, 75);
 		contentPane.add(lblNewLabel_1);
 		
+		
 				
 		JLabel lblOrder = new JLabel("size---------------------------------------------------------price.");
 		lblOrder.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -81,8 +79,9 @@ public class Waffletotal extends JFrame {
 		lblOrder.setBounds(373, 31, 194, 137);
 		contentPane.add(lblOrder);
 		
-		JLabel lblSize = new JLabel(topping1+" "+topping2);
-		//JLabel lblSize = new JLabel("1. {size}\r\n--------------------------------------------Price.");
+		
+		//JLabel lblSize = new JLabel();
+		JLabel lblSize = new JLabel("1. {size}\r\n--------------------------------------------Price.");
 		lblSize.setFont(new Font("Yu Mincho", Font.PLAIN, 22));
 		lblSize.setBounds(73, 151, 620, 102);
 		contentPane.add(lblSize);

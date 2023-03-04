@@ -6,6 +6,8 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Color;
 import java.awt.Toolkit;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
@@ -19,8 +21,7 @@ import javax.swing.ImageIcon;
 
 public class Waffle4 extends JFrame {
 
-	private JPanel contentPane;
-
+	private JPanel contentPane;	
 	/**
 	 * Launch the application.
 	 */
@@ -40,7 +41,10 @@ public class Waffle4 extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	@SuppressWarnings("unlikely-arg-type")
 	public Waffle4() {
+		
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -208,14 +212,36 @@ public class Waffle4 extends JFrame {
 		lblPer.setBackground(new Color(255, 132, 72));
 		lblPer.setBounds(315, 468, 257, 54);
 		contentPane.add(lblPer);
+				
 		
-		JButton medium_Next = new JButton("Next");
+		
+		JButton medium_Next = new JButton("Confirm");
 		medium_Next.addActionListener(new ActionListener() {
-			@SuppressWarnings("deprecation")
-			public void actionPerformed(ActionEvent e) {
-				Waffledis dis = new Waffledis();
-				dis.show();
-                dispose();
+			int price = 60;
+			String top1,top2,top3,flour;
+			public void actionPerformed(ActionEvent arg0) {								
+				if(medium_Green.isSelected()) {
+					flour = "Green Tea"; 
+				}else if(medium_Strawberry.isSelected()){
+					flour = "Strawberry"; 
+				}else if(medium_Choc.isSelected()) {
+					flour = "Chocolate"; 
+				}else {
+					flour = "Original"; 
+				}
+				
+				top1 = (String)medium_Topping1.getSelectedItem();
+				top2 = (String)medium_Topping2.getSelectedItem();
+				top3 = (String)medium_Topping3.getSelectedItem();
+				
+				if(top1.equals("-")) price = price-10;
+				if(top2.equals("-")) price = price-10;
+				if(top3.equals("-")) price = price-10;
+				Save save = new Save();
+				save.set3(top1, top2, top3);
+				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
+				top1+"\nTopping : "+top2+"\nTopping : "+top3+"\nPrice : "+price);	
+				System.exit(0);
 			}
 		});
 		medium_Next.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -256,5 +282,10 @@ public class Waffle4 extends JFrame {
 		Code.setBackground(Color.WHITE);
 		Code.setBounds(648, 489, 194, 52);
 		contentPane.add(Code);
+		
+		
+		
+	
 	}
+	
 }
