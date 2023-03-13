@@ -47,7 +47,7 @@ public class Waffle3 extends JFrame {
 	public Waffle3() {
 
 
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
+		
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 700);
@@ -133,7 +133,6 @@ public class Waffle3 extends JFrame {
 		medium_Topping1.addItem("Ham");
 		medium_Topping1.addItem("Cheddar Cheese");
 		medium_Topping1.addItem("Strawberryy Yam");
-		//medium_Topping1.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping1.setToolTipText("");
 		medium_Topping1.setBounds(264, 310, 330, 30);
 		contentPane.add(medium_Topping1);
@@ -160,7 +159,6 @@ public class Waffle3 extends JFrame {
 		medium_Topping2.addItem("Ham");
 		medium_Topping2.addItem("Cheddar Cheese");
 		medium_Topping2.addItem("Strawberryy Yam");
-		//medium_Topping2.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping2.setToolTipText("");
 		medium_Topping2.setFont(new Font("Yu Mincho", Font.BOLD, 26));
 		medium_Topping2.setBounds(264, 364, 330, 30);
@@ -200,7 +198,6 @@ public class Waffle3 extends JFrame {
 		medium_Topping3.addItem("Ham");
 		medium_Topping3.addItem("Cheddar Cheese");
 		medium_Topping3.addItem("Strawberryy Yam");
-		//medium_Topping3.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		medium_Topping3.setToolTipText("");
 		medium_Topping3.setFont(new Font("Yu Mincho", Font.BOLD, 26));
 		medium_Topping3.setBounds(264, 428, 330, 30);

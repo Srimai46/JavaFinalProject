@@ -52,7 +52,6 @@ public class Waffle2 extends JFrame {
 	 * Create the frame.
 	 */
 	public Waffle2() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
 		setTitle("Waffle Nanoom");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 900, 700);
@@ -93,7 +92,6 @@ public class Waffle2 extends JFrame {
 		small_Topping1.addItem("Ham");
 		small_Topping1.addItem("Cheddar Cheese");
 		small_Topping1.addItem("Strawberryy Yam");
-		//small_Topping1.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		small_Topping1.setToolTipText("");
 		small_Topping1.setBounds(264, 308, 392, 44);
 		contentPane.add(small_Topping1);
@@ -167,7 +165,6 @@ public class Waffle2 extends JFrame {
 		small_Topping2.addItem("Ham");
 		small_Topping2.addItem("Cheddar Cheese");
 		small_Topping2.addItem("Strawberryy Yam");
-		//small_Topping2.setModel(new DefaultComboBoxModel(new String[] {"-", "Corn", "Crab strick", "Currant", "Foytong", "Pumpkin", "Coconut", "Taro", "Purple Sweet Potato", "Banana", "Chocolate chip", "Ham", "Cheddar Cheese", "Strawberryy Yam"}));
 		small_Topping2.setToolTipText("");
 		small_Topping2.setFont(new Font("Yu Mincho", Font.BOLD, 26));
 		small_Topping2.setBounds(264, 362, 392, 44);
@@ -223,7 +220,7 @@ public class Waffle2 extends JFrame {
 				if(top2.equals("-")) price = price-10;
 
 
-				JOptionPane.showMessageDialog(lblPer,"Size : M\nFlout : "+flour+"\nTopping : "+
+				JOptionPane.showMessageDialog(lblPer,"Size : S\nFlout : "+flour+"\nTopping : "+
 				top1+"\nTopping : "+top2+"\nPrice : "+price, "Bill",JOptionPane.PLAIN_MESSAGE);	
 				System.exit(0);
 			}

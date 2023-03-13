@@ -32,7 +32,6 @@ public class WaffleDemo extends JFrame {
  }
 
  public WaffleDemo() {
-  setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\D4bby\\Downloads\\0d1e70fd160476a3f78496be79e0813e.png"));
   setTitle("Waffle Nanoom");
   setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
   setBounds(100, 100, 900, 700);
